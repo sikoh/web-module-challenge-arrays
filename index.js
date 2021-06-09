@@ -45,10 +45,11 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/) {
-  /*your code here*/
+function copy(originalFlavors) {
+  let newCream = [...originalFlavors];
+  return newCream;
 }
-
+copy(originalFlavors);
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
     1. an array as a parameter
@@ -59,8 +60,8 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-function is31Flavors(/*your code here*/) {
-  /*your code here*/
+function is31Flavors(originalFlavors) {
+  console.log(originalFlavors.length);
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -75,8 +76,9 @@ Use the addFlavor function below to do the following:
     For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(/*your code here*/) {
-  /*your code here*/
+function addFlavor(originalFlavors) {
+  originalFlavors.unshift("Rainbow Sherbert");
+  return originalFlavors;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -90,8 +92,9 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/) {
-  /*your code here*/
+function removeLastFlavor(originalFlavors) {
+  originalFlavors.pop();
+  return originalFlavors;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -105,7 +108,7 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/) {
+function getFlavorByIndex(originalFlavors) {
   /*your code here*/
 }
 
