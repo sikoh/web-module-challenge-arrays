@@ -184,8 +184,13 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/) {
-  /*code here*/
+function getAverageWordLength(array) {
+  let cake = [];
+  for (let i = 0; i < array.length; i++) {
+    let item = array[i];
+    cake[item] = cake[item] + 1 || 1;
+  }
+  return cake;
 }
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -200,8 +205,25 @@ Use the getRandomFlavors function and new arrays below to do the following:
     For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
 
-function getRandomFlavors(/*code here*/) {
-  /*code here*/
+function getRandomFlavors(array1, array2, array3, array4) {
+  /*create array to hold the random 31 flavors*/
+  const randomFlavorArray = [];
+  /*combine all flavors into 1 array*/
+  const allFlavors = [];
+  allFlavors.push(...array1);
+  allFlavors.push(...array2);
+  allFlavors.push(...array3);
+  allFlavors.push(...array4);
+  /*Randomly select 31 flavors*/
+  let randomIndex = 0;
+  for (let i = 0; i < 31; i++) {
+    /*Find the flavor to select*/
+    randomIndex = Math.floor(Math.random() * allFlavors.length);
+    randomFlavorArray.push(allFlavors[randomIndex]);
+    /*Remove the flavor we already selected*/
+    allFlavors.splice(randomIndex, 1);
+  }
+  return randomFlavorArray;
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
